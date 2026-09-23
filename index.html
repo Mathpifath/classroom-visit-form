@@ -262,15 +262,15 @@ button{
   }
 
   .section{
-    margin-top:1.5mm!important;
+    margin-top:1mm!important;
     border-radius:1.5mm!important;
     break-inside:avoid!important;
     page-break-inside:avoid!important;
   }
 
   .section h2{
-    padding:1.8mm 2.4mm!important;
-    font-size:10.5pt!important;
+    padding:1.5mm 2.2mm!important;
+    font-size:10.2pt!important;
     line-height:1.08!important;
   }
 
@@ -291,7 +291,7 @@ button{
   }
 
   .rating-table td,.rating-table th{
-    height:8.5mm!important;
+    height:8.0mm!important;
   }
 
   .rating-table input[type="radio"]{
@@ -299,18 +299,18 @@ button{
   }
 
   textarea{
-    min-height:20mm!important;
-    height:20mm!important;
-    max-height:20mm!important;
+    min-height:16mm!important;
+    height:17mm!important;
+    max-height:17mm!important;
     overflow:hidden!important;
     resize:none!important;
   }
 
   .approval{
     grid-template-columns:1fr 28mm 1fr!important;
-    gap:2.5mm!important;
-    min-height:20mm!important;
-    padding:3mm!important;
+    gap:2mm!important;
+    min-height:16mm!important;
+    padding:2mm!important;
   }
 
   .sig{
@@ -318,8 +318,8 @@ button{
   }
 
   .sig input{
-    height:4.5mm!important;
-    margin-top:1.5mm!important;
+    height:4mm!important;
+    margin-top:1mm!important;
   }
 
   .stamp{
@@ -327,16 +327,29 @@ button{
   }
 
   .footer{
-    margin-top:1.8mm!important;
+    margin-top:1.2mm!important;
     font-size:7.4pt!important;
+  }
+
+
+  .section:last-of-type h2{
+    padding:1.3mm 2.2mm!important;
+  }
+  .section:last-of-type .approval{
+    min-height:14mm!important;
+    padding:1.6mm!important;
   }
 
   .actions,.note{
     display:none!important;
   }
 
-  .footer,
   .section:last-of-type{
+    break-inside:auto!important;
+    page-break-inside:auto!important;
+    margin-top:.8mm!important;
+  }
+  .footer{
     break-after:avoid-page!important;
     page-break-after:avoid!important;
   }
