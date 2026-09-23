@@ -196,89 +196,81 @@ button{
 @media print{
   @page{size:A4 portrait;margin:4mm}
   html,body{
-    width:202mm!important;
-    height:288mm!important;
     margin:0!important;
     padding:0!important;
     background:#fff!important;
-    overflow:hidden!important;
     -webkit-print-color-adjust:exact!important;
     print-color-adjust:exact!important;
   }
-  body{font-size:8.8pt!important}
+  body{font-size:9.6pt!important}
   .wrap{
     width:202mm!important;
     max-width:202mm!important;
-    height:286mm!important;
-    margin:0!important;
+    margin:0 auto!important;
     padding:0!important;
     box-shadow:none!important;
     border-radius:0!important;
-    overflow:hidden!important;
   }
   .header{
     grid-template-columns:1fr .8fr 1fr!important;
-    gap:3mm!important;
-    padding:1.5mm 1mm 2mm!important;
+    gap:3.5mm!important;
+    padding:2.2mm 1mm 3mm!important;
   }
   .header .right,.header .left{
-    font-size:8.2pt!important;
-    line-height:1.25!important;
+    font-size:9pt!important;
+    line-height:1.35!important;
   }
-  .logo{font-size:16pt!important}
-  .logo small{font-size:6.5pt!important}
-  .header input{width:28mm!important;height:4mm!important;font-size:8pt!important}
+  .logo{font-size:18pt!important}
+  .logo small{font-size:7pt!important}
+  .header input{width:30mm!important;height:5mm!important;font-size:8.8pt!important}
   .title{
-    margin:1.5mm 0 1mm!important;
-    padding:2.2mm!important;
-    font-size:15.5pt!important;
-    border-radius:2mm!important;
+    margin:2mm 0 1.6mm!important;
+    padding:3mm!important;
+    font-size:18pt!important;
+    border-radius:2.5mm!important;
   }
   .section{
-    margin-top:1.1mm!important;
-    border-radius:1.5mm!important;
+    margin-top:1.8mm!important;
+    border-radius:1.8mm!important;
     break-inside:avoid!important;
     page-break-inside:avoid!important;
   }
   .section h2{
-    padding:1.4mm 2mm!important;
-    font-size:9.7pt!important;
-  }
-  td,th{
-    padding:.8mm 1mm!important;
-    font-size:8.2pt!important;
+    padding:2mm 2.5mm!important;
+    font-size:10.7pt!important;
     line-height:1.08!important;
   }
-  .label{width:35mm!important}
+  td,th{
+    padding:1.2mm 1.3mm!important;
+    font-size:9pt!important;
+    line-height:1.15!important;
+  }
+  .label{width:38mm!important}
   input[type="text"],input[type="date"],select,textarea{
-    font-size:8pt!important;
-    padding:.4mm .8mm!important;
-    line-height:1.1!important;
+    font-size:8.9pt!important;
+    padding:.7mm 1mm!important;
+    line-height:1.15!important;
   }
   textarea{
-    min-height:12mm!important;
-    height:12mm!important;
-    max-height:12mm!important;
+    min-height:16mm!important;
+    height:16mm!important;
+    max-height:16mm!important;
     overflow:hidden!important;
     resize:none!important;
   }
-  .rating-table td,.rating-table th{
-    height:7mm!important;
-  }
+  .rating-table td,.rating-table th{height:8.3mm!important}
+  .rating-table input[type="radio"]{transform:scale(1.1)!important}
   .approval{
-    grid-template-columns:1fr 26mm 1fr!important;
-    gap:2mm!important;
-    padding:2mm!important;
-    min-height:16mm!important;
+    grid-template-columns:1fr 28mm 1fr!important;
+    gap:2.5mm!important;
+    padding:3mm!important;
+    min-height:20mm!important;
   }
-  .sig{font-size:8pt!important}
-  .stamp{font-size:8pt!important}
-  .footer{
-    margin-top:1.5mm!important;
-    font-size:7pt!important;
-  }
+  .sig{font-size:8.8pt!important}
+  .sig input{height:4.5mm!important;margin-top:1.5mm!important}
+  .stamp{font-size:8.8pt!important}
+  .footer{margin-top:2mm!important;font-size:7.5pt!important}
   .actions,.note{display:none!important}
-  *{page-break-after:avoid!important}
 }
 </style>
 </head>
