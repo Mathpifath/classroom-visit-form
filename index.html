@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>نموذج زيارة صفية</title>
+<style>
+:root{
+  --blue:#0b3f78;
+  --line:#86bfe7;
+  --sky:#dff1fb;
+  --green:#dff3e8;
+  --text:#173a63;
+  --muted:#5f7892;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Tahoma, Arial, sans-serif;
+  background:#eef5f7;
+  color:var(--text);
+}
+.wrap{
+  width:min(980px,96vw);
+  margin:22px auto;
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 8px 26px rgba(0,0,0,.08);
+}
+.header{
+  display:grid;
+  grid-template-columns:1fr .8fr 1fr;
+  gap:16px;
+  align-items:start;
+  border-bottom:2px solid var(--blue);
+  padding-bottom:12px;
+}
+.header .right,.header .left{
+  font-weight:700;
+  line-height:1.75;
+}
+.header .left{text-align:left}
+.logo{
+  text-align:center;
+  color:#1aa8a3;
+  font-weight:800;
+  font-size:28px;
+  line-height:1.05;
+}
+.logo small{
+  display:block;
+  color:#2d7b90;
+  font-size:12px;
+  margin-top:4px;
+}
+.header-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  justify-content:flex-start;
+}
+.header input{
+  width:120px;
+  border:none;
+  border-bottom:1px dotted #7089a0;
+  outline:none;
+  text-align:center;
+  font:inherit;
+}
+.title{
+  margin:14px 0 10px;
+  background:linear-gradient(90deg,#dff2fb,#cfeffa,#dff3e8);
+  border-radius:14px;
+  text-align:center;
+  font-size:28px;
+  font-weight:800;
+  padding:11px;
+}
+.section{
+  border:1.5px solid var(--line);
+  border-radius:13px;
+  overflow:hidden;
+  margin-top:12px;
+}
+.section h2{
+  margin:0;
+  padding:9px 14px;
+  background:linear-gradient(90deg,var(--green),#e8f7ef);
+  font-size:18px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+td,th{
+  border:1px solid var(--line);
+  padding:9px;
+  vertical-align:middle;
+}
+th{
+  background:#eef8fd;
+}
+.label{
+  width:180px;
+  background:#f5fbfe;
+  font-weight:700;
+}
+input[type="text"], input[type="date"], select, textarea{
+  width:100%;
+  border:1px solid #c9dbe8;
+  border-radius:8px;
+  padding:8px 10px;
+  font:inherit;
+  color:var(--text);
+  background:#fff;
+}
+textarea{
+  min-height:80px;
+  resize:vertical;
+}
+.rating-table th,.rating-table td{
+  text-align:center;
+}
+.rating-table td:first-child{
+  text-align:right;
+}
+.rating-table input[type="radio"]{
+  transform:scale(1.15);
+}
+.note{
+  margin-top:8px;
+  font-size:13px;
+  color:var(--muted);
+}
+.approval{
+  display:grid;
+  grid-template-columns:1fr 140px 1fr;
+  gap:12px;
+  padding:14px;
+}
+.sig{
+  text-align:center;
+  font-weight:700;
+}
+.sig input{
+  margin-top:10px;
+  border:none;
+  border-bottom:1px dotted #6c8398;
+  border-radius:0;
+  text-align:center;
+}
+.stamp{
+  background:#eef8fd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  font-weight:700;
+}
+.footer{
+  margin-top:10px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  font-size:13px;
+  color:#56718b;
+}
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin-top:18px;
+}
+button{
+  border:none;
+  border-radius:10px;
+  padding:10px 16px;
+  font:inherit;
+  font-weight:700;
+  cursor:pointer;
+}
+.print{background:#0b77c5;color:#fff}
+.save{background:#2d8f66;color:#fff}
+.clear{background:#e8edf1;color:#28445f}
+
+@media(max-width:720px){
+  .header{grid-template-columns:1fr}
+  .header .right,.header .left,.logo{text-align:center}
+  .header-row{justify-content:center}
+  .approval{grid-template-columns:1fr}
+  .title{font-size:23px}
+}
+
+@media print{
+  @page{size:A4 portrait;margin:4mm}
+  html,body{
+    width:202mm!important;
+    height:288mm!important;
+    margin:0!important;
+    padding:0!important;
+    background:#fff!important;
+    overflow:hidden!important;
+    -webkit-print-color-adjust:exact!important;
+    print-color-adjust:exact!important;
+  }
+  body{font-size:8.8pt!important}
+  .wrap{
+    width:202mm!important;
+    max-width:202mm!important;
+    height:286mm!important;
+    margin:0!important;
+    padding:0!important;
+    box-shadow:none!important;
+    border-radius:0!important;
+    overflow:hidden!important;
+  }
+  .header{
+    grid-template-columns:1fr .8fr 1fr!important;
+    gap:3mm!important;
+    padding:1.5mm 1mm 2mm!important;
+  }
+  .header .right,.header .left{
+    font-size:8.2pt!important;
+    line-height:1.25!important;
+  }
+  .logo{font-size:16pt!important}
+  .logo small{font-size:6.5pt!important}
+  .header input{width:28mm!important;height:4mm!important;font-size:8pt!important}
+  .title{
+    margin:1.5mm 0 1mm!important;
+    padding:2.2mm!important;
+    font-size:15.5pt!important;
+    border-radius:2mm!important;
+  }
+  .section{
+    margin-top:1.1mm!important;
+    border-radius:1.5mm!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+  .section h2{
+    padding:1.4mm 2mm!important;
+    font-size:9.7pt!important;
+  }
+  td,th{
+    padding:.8mm 1mm!important;
+    font-size:8.2pt!important;
+    line-height:1.08!important;
+  }
+  .label{width:35mm!important}
+  input[type="text"],input[type="date"],select,textarea{
+    font-size:8pt!important;
+    padding:.4mm .8mm!important;
+    line-height:1.1!important;
+  }
+  textarea{
+    min-height:12mm!important;
+    height:12mm!important;
+    max-height:12mm!important;
+    overflow:hidden!important;
+    resize:none!important;
+  }
+  .rating-table td,.rating-table th{
+    height:7mm!important;
+  }
+  .approval{
+    grid-template-columns:1fr 26mm 1fr!important;
+    gap:2mm!important;
+    padding:2mm!important;
+    min-height:16mm!important;
+  }
+  .sig{font-size:8pt!important}
+  .stamp{font-size:8pt!important}
+  .footer{
+    margin-top:1.5mm!important;
+    font-size:7pt!important;
+  }
+  .actions,.note{display:none!important}
+  *{page-break-after:avoid!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="right">
+      المملكة العربية السعودية<br>
+      وزارة التعليم<br>
+      الإدارة العامة للتعليم بمنطقة الرياض
+    </div>
+    <div class="logo">
+      وزارة التعليم
+      <small>Ministry of Education</small>
+    </div>
+    <div class="left">
+      ثانوية حفصة بنت سيرين
+      <div class="header-row">الفصل الدراسي: <input type="text" id="term"></div>
+      <div class="header-row">العام الدراسي: <input type="text" id="year" placeholder="........ 14هـ"></div>
+    </div>
+  </div>
+
+  <div class="title">نموذج زيارة صفية</div>
+
+  <div class="section">
+    <h2>أولًا: بيانات الزيارة</h2>
+    <table>
+      <tr>
+        <td class="label">اسم المعلمة الزائرة</td><td><input type="text" id="visitor"></td>
+        <td class="label">التخصص</td><td><input type="text" id="visitorMajor"></td>
+      </tr>
+      <tr>
+        <td class="label">اسم المعلمة المُزارة</td><td><input type="text" id="visited"></td>
+        <td class="label">التخصص</td><td><input type="text" id="visitedMajor"></td>
+      </tr>
+      <tr>
+        <td class="label">المادة</td><td><input type="text" id="subject"></td>
+        <td class="label">الصف</td><td><input type="text" id="grade"></td>
+      </tr>
+      <tr>
+        <td class="label">موضوع الدرس</td><td colspan="3"><input type="text" id="lesson"></td>
+      </tr>
+      <tr>
+        <td class="label">تاريخ الزيارة</td><td><input type="date" id="visitDate"></td>
+        <td class="label">الحصة</td><td><input type="text" id="period"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>ثانيًا: جوانب الملاحظة الصفية</h2>
+    <table class="rating-table">
+      <thead>
+        <tr>
+          <th>م</th>
+          <th>جوانب الملاحظة</th>
+          <th>متحقق</th>
+          <th>متحقق جزئيًا</th>
+          <th>غير ملاحظ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>وضوح أهداف الدرس وارتباطها بالتعلم المستهدف.</td><td><input type="radio" name="r1"></td><td><input type="radio" name="r1"></td><td><input type="radio" name="r1"></td></tr>
+        <tr><td>2</td><td>تنوع الاستراتيجيات والممارسات التدريسية بما يناسب طبيعة الدرس.</td><td><input type="radio" name="r2"></td><td><input type="radio" name="r2"></td><td><input type="radio" name="r2"></td></tr>
+        <tr><td>3</td><td>فاعلية مشاركة الطالبات وتفاعلهم أثناء التعلم.</td><td><input type="radio" name="r3"></td><td><input type="radio" name="r3"></td><td><input type="radio" name="r3"></td></tr>
+        <tr><td>4</td><td>استخدام أساليب تقويم مناسبة أثناء الدرس وتقديم تغذية راجعة.</td><td><input type="radio" name="r4"></td><td><input type="radio" name="r4"></td><td><input type="radio" name="r4"></td></tr>
+        <tr><td>5</td><td>مراعاة الفروق الفردية ودعم تعلم الطالبات وفق احتياجاتهن.</td><td><input type="radio" name="r5"></td><td><input type="radio" name="r5"></td><td><input type="radio" name="r5"></td></tr>
+        <tr><td>6</td><td>توظيف الوسائل أو التقنية بما يخدم هدف الدرس.</td><td><input type="radio" name="r6"></td><td><input type="radio" name="r6"></td><td><input type="radio" name="r6"></td></tr>
+        <tr><td>7</td><td>إدارة وقت الحصة والانتقال بين مراحل الدرس بصورة منظمة.</td><td><input type="radio" name="r7"></td><td><input type="radio" name="r7"></td><td><input type="radio" name="r7"></td></tr>
+        <tr><td>8</td><td>وجود ممارسات تدريسية يمكن الاستفادة منها ونقلها إلى مواقف تعليمية أخرى.</td><td><input type="radio" name="r8"></td><td><input type="radio" name="r8"></td><td><input type="radio" name="r8"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>ثالثًا: أبرز الممارسات التي تمت الاستفادة منها</h2>
+    <textarea id="strengths"></textarea>
+  </div>
+
+  <div class="section">
+    <h2>رابعًا: أفكار أو مقترحات قابلة للتطبيق في الممارسة التدريسية</h2>
+    <textarea id="ideas"></textarea>
+  </div>
+
+  <div class="section">
+    <h2>خامسًا: انعكاس الزيارة على الممارسة المهنية للمعلمة الزائرة</h2>
+    <textarea id="reflection" placeholder="ما الذي ستطبقينه أو تطورينه في ممارستك التدريسية بعد هذه الزيارة؟"></textarea>
+  </div>
+
+  <div class="section">
+    <h2>سادسًا: اعتماد الزيارة</h2>
+    <div class="approval">
+      <div class="sig">توقيع المعلمة الزائرة<input type="text" id="visitorSig"></div>
+      <div class="stamp">الختم</div>
+      <div class="sig">مديرة المدرسة<br>هيفاء المعمر<input type="text" id="principalSig"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>إعداد/ د. فاطمة الثنيان</div>
+    <div>مستمرون في التطوير.. لصناعة الفرق</div>
+  </div>
+
+  <div class="actions">
+    <button class="print" onclick="window.print()">🖨️ طباعة / حفظ PDF</button>
+    <button class="save" id="saveBtn">💾 حفظ البيانات</button>
+    <button class="clear" id="clearBtn">🗑️ مسح البيانات</button>
+  </div>
+</div>
+
+<script>
+const KEY='classroom-visit-form-v1';
+const fields=[...document.querySelectorAll('input[type=text],input[type=date],textarea')];
+document.getElementById('saveBtn').addEventListener('click',()=>{
+  const data={};
+  fields.forEach((el,i)=>data[el.id||('f'+i)]=el.value);
+  document.querySelectorAll('input[type=radio]').forEach((el,i)=>data['radio'+i]=el.checked);
+  localStorage.setItem(KEY,JSON.stringify(data));
+  alert('تم حفظ البيانات على هذا الجهاز.');
+});
+document.getElementById('clearBtn').addEventListener('click',()=>{
+  if(!confirm('هل تريدين مسح جميع البيانات من النموذج؟')) return;
+  fields.forEach(el=>el.value='');
+  document.querySelectorAll('input[type=radio]').forEach(el=>el.checked=false);
+  localStorage.removeItem(KEY);
+});
+</script>
+</body>
+</html>
