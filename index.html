@@ -194,10 +194,7 @@ button{
 }
 
 @media print{
-  @page{
-    size:A4 portrait;
-    margin:4mm;
-  }
+  @page{size:A4 portrait;margin:3mm}
 
   html,body{
     margin:0!important;
@@ -212,13 +209,11 @@ button{
     print-color-adjust:exact!important;
   }
 
-  body{
-    font-size:9.8pt!important;
-  }
+  body{font-size:10.2pt!important}
 
   .wrap{
-    width:202mm!important;
-    max-width:202mm!important;
+    width:204mm!important;
+    max-width:204mm!important;
     height:auto!important;
     max-height:none!important;
     margin:0 auto!important;
@@ -229,130 +224,90 @@ button{
   }
 
   .header{
-    grid-template-columns:1fr .8fr 1fr!important;
-    gap:3.5mm!important;
-    padding:2mm 1mm 2.8mm!important;
-    border-bottom-width:1.2px!important;
+    grid-template-columns:1fr .82fr 1fr!important;
+    gap:2.8mm!important;
+    padding:1.6mm 1mm 2.1mm!important;
+    border-bottom-width:1.1px!important;
   }
 
-  .header .right,.header .left{
-    font-size:9pt!important;
-    line-height:1.32!important;
-  }
-
-  .logo{
-    font-size:18pt!important;
-  }
-
-  .logo small{
-    font-size:7pt!important;
-  }
+  .header .right,.header .left{font-size:9.4pt!important;line-height:1.28!important}
+  .logo{font-size:18.5pt!important;line-height:1!important}
+  .logo small{font-size:7.2pt!important}
 
   .header input{
-    width:30mm!important;
-    height:4.8mm!important;
-    font-size:8.8pt!important;
+    width:31mm!important;
+    height:5mm!important;
+    font-size:9.2pt!important;
   }
 
   .title{
-    margin:1.4mm 0 1.1mm!important;
-    padding:2.4mm!important;
-    font-size:18pt!important;
-    border-radius:2.2mm!important;
+    margin:1.1mm 0 .9mm!important;
+    padding:2.1mm!important;
+    font-size:18.5pt!important;
+    border-radius:2mm!important;
+    line-height:1!important;
   }
 
   .section{
-    margin-top:.7mm!important;
-    border-radius:1.5mm!important;
+    margin-top:.6mm!important;
+    border-radius:1.4mm!important;
     break-inside:avoid!important;
     page-break-inside:avoid!important;
   }
 
   .section h2{
-    padding:1.3mm 2.1mm!important;
-    font-size:10.2pt!important;
-    line-height:1.08!important;
+    padding:1.15mm 1.9mm!important;
+    font-size:10.6pt!important;
+    line-height:1.06!important;
   }
 
+  table{table-layout:fixed!important}
   td,th{
-    padding:1mm 1.1mm!important;
-    font-size:8.9pt!important;
-    line-height:1.14!important;
+    padding:.95mm 1.05mm!important;
+    font-size:9.2pt!important;
+    line-height:1.12!important;
   }
 
-  .label{
-    width:37mm!important;
-  }
+  .label{width:37mm!important}
 
   input[type="text"],input[type="date"],select,textarea{
-    font-size:8.8pt!important;
-    padding:.55mm .9mm!important;
-    line-height:1.15!important;
+    font-size:9.2pt!important;
+    padding:.45mm .75mm!important;
+    line-height:1.12!important;
+    border-width:.8px!important;
+    border-radius:1.2mm!important;
   }
 
-  .rating-table td,.rating-table th{
-    height:7.4mm!important;
-  }
-
-  .rating-table input[type="radio"]{
-    transform:scale(1.12)!important;
-  }
+  .rating-table td,.rating-table th{height:7mm!important}
+  .rating-table input[type="radio"]{transform:scale(1.05)!important}
 
   textarea{
-    min-height:13mm!important;
-    height:13.5mm!important;
-    max-height:13.5mm!important;
+    min-height:14mm!important;
+    height:14mm!important;
+    max-height:14mm!important;
     overflow:hidden!important;
     resize:none!important;
   }
 
   .approval{
-    grid-template-columns:1fr 28mm 1fr!important;
-    gap:2mm!important;
-    min-height:13mm!important;
-    padding:2mm!important;
-  }
-
-  .sig{
-    font-size:8.8pt!important;
-  }
-
-  .sig input{
-    height:4mm!important;
-    margin-top:.7mm!important;
-  }
-
-  .stamp{
-    font-size:8.8pt!important;
-  }
-
-  .footer{
-    margin-top:1.2mm!important;
-    font-size:7.4pt!important;
-  }
-
-
-  .section:last-of-type h2{
-    padding:1.3mm 2.2mm!important;
-  }
-  .section:last-of-type .approval{
+    grid-template-columns:1fr 27mm 1fr!important;
+    gap:1.6mm!important;
     min-height:12mm!important;
-    padding:1.2mm!important;
+    padding:1.4mm!important;
   }
 
-  .actions,.note{
-    display:none!important;
-  }
+  .sig,.stamp{font-size:9pt!important}
+  .sig input{height:3.8mm!important;margin-top:.45mm!important}
 
-  .section:last-of-type{
-    break-inside:auto!important;
-    page-break-inside:auto!important;
-    margin-top:.5mm!important;
-  }
-  .footer{
-    break-after:avoid-page!important;
-    page-break-after:avoid!important;
-  }
+  .footer{margin-top:.9mm!important;font-size:7.6pt!important;line-height:1!important}
+
+  .section:last-of-type h2{padding:1.1mm 1.9mm!important}
+  .section:last-of-type .approval{min-height:11.5mm!important;padding:1.1mm!important}
+
+  .actions,.note{display:none!important}
+
+  .section:last-of-type{break-inside:auto!important;page-break-inside:auto!important;margin-top:.5mm!important}
+  .footer{break-after:avoid-page!important;page-break-after:avoid!important}
 }
 </style>
 </head>
