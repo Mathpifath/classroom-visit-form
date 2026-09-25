@@ -123,8 +123,13 @@ textarea{
   text-align:center;
 }
 .rating-table td:first-child{
-  text-align:right;
+  text-align:center;
 }
+.rating-table th:nth-child(1),.rating-table td:nth-child(1){width:4%}
+.rating-table th:nth-child(2),.rating-table td:nth-child(2){width:56%;text-align:right}
+.rating-table th:nth-child(3),.rating-table td:nth-child(3){width:12%}
+.rating-table th:nth-child(4),.rating-table td:nth-child(4){width:16%}
+.rating-table th:nth-child(5),.rating-table td:nth-child(5){width:12%}
 .rating-table input[type="radio"]{
   transform:scale(1.15);
 }
@@ -278,13 +283,18 @@ button{
     border-radius:1.2mm!important;
   }
 
-  .rating-table td,.rating-table th{height:7mm!important}
+  .rating-table td,.rating-table th{height:6.25mm!important}
+  .rating-table th:nth-child(1),.rating-table td:nth-child(1){width:4%!important}
+  .rating-table th:nth-child(2),.rating-table td:nth-child(2){width:56%!important;text-align:right!important}
+  .rating-table th:nth-child(3),.rating-table td:nth-child(3){width:12%!important}
+  .rating-table th:nth-child(4),.rating-table td:nth-child(4){width:16%!important}
+  .rating-table th:nth-child(5),.rating-table td:nth-child(5){width:12%!important}
   .rating-table input[type="radio"]{transform:scale(1.05)!important}
 
   textarea{
-    min-height:14mm!important;
-    height:14mm!important;
-    max-height:14mm!important;
+    min-height:12.5mm!important;
+    height:12.5mm!important;
+    max-height:12.5mm!important;
     overflow:hidden!important;
     resize:none!important;
   }
@@ -377,7 +387,9 @@ button{
         <tr><td>5</td><td>مراعاة الفروق الفردية ودعم تعلم الطالبات وفق احتياجاتهن.</td><td><input type="radio" name="r5"></td><td><input type="radio" name="r5"></td><td><input type="radio" name="r5"></td></tr>
         <tr><td>6</td><td>توظيف الوسائل أو التقنية بما يخدم هدف الدرس.</td><td><input type="radio" name="r6"></td><td><input type="radio" name="r6"></td><td><input type="radio" name="r6"></td></tr>
         <tr><td>7</td><td>إدارة وقت الحصة والانتقال بين مراحل الدرس بصورة منظمة.</td><td><input type="radio" name="r7"></td><td><input type="radio" name="r7"></td><td><input type="radio" name="r7"></td></tr>
-        <tr><td>8</td><td>وجود ممارسات تدريسية يمكن الاستفادة منها ونقلها إلى مواقف تعليمية أخرى.</td><td><input type="radio" name="r8"></td><td><input type="radio" name="r8"></td><td><input type="radio" name="r8"></td></tr>
+        <tr><td>8</td><td>ربط محتوى الدرس بواقع الطالبات ومواقف حياتية ذات معنى.</td><td><input type="radio" name="r8"></td><td><input type="radio" name="r8"></td><td><input type="radio" name="r8"></td></tr>
+        <tr><td>9</td><td>تنوع الأسئلة والمهام بما يدعم التفكير ويحفز مهارات التفكير العليا.</td><td><input type="radio" name="r9"></td><td><input type="radio" name="r9"></td><td><input type="radio" name="r9"></td></tr>
+        <tr><td>10</td><td>وجود ممارسات تدريسية يمكن الاستفادة منها ونقلها إلى مواقف تعليمية أخرى.</td><td><input type="radio" name="r10"></td><td><input type="radio" name="r10"></td><td><input type="radio" name="r10"></td></tr>
       </tbody>
     </table>
   </div>
